@@ -17,7 +17,7 @@ const News = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:3003/articles")
+      .get("https://dbtesttimo.herokuapp.com/articles")
       .then((res) => setNewsData(res.data));
   };
 
