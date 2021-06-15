@@ -3,7 +3,7 @@ import axios from "axios";
 
 const DeleteArticle = ({ id }) => {
   const handleDelete = () => {
-    axios.delete("http://localhost:3003/articles/" + id);
+    axios.delete("https://dbtesttimo.herokuapp.com/articles/" + id);
     window.location.reload();
   };
 

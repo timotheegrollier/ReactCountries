@@ -17,7 +17,7 @@ const News = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:3003/articles")
+      .get("https://dbtesttimo.herokuapp.com/articles")
       .then((res) => setNewsData(res.data));
   };
 
@@ -26,12 +26,12 @@ const News = () => {
     if (author.length < 2) {
       setNoAuthor(true);
     } else {
-        setNoAuthor(false);
+      setNoAuthor(false);
       if (content.length < 25) {
         setError(true);
       } else {
         axios
-          .post("http://localhost:3003/articles", {
+          .post("https://dbtesttimo.herokuapp.com/articles", {
             author,
             content,
             date: Date.now(),

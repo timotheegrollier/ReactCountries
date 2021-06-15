@@ -24,9 +24,11 @@ const Article = ({ article }) => {
   };
 
   const handleEdit = () => {
-    axios.put("http://localhost:3003/articles/" + article.id, data).then(() => {
-      setIsEditing(false);
-    });
+    axios
+      .put("https://dbtesttimo.herokuapp.com/articles/" + article.id, data)
+      .then(() => {
+        setIsEditing(false);
+      });
   };
 
   return (
